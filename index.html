@@ -1,283 +1,382 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
+    <!-- Métadonnées du document -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="description" content="Agence digitale BIMO-tech - Développement web, apps mobiles, marketing digital à Dakar. Boostez votre business avec nos solutions innovantes.">
+    <meta name="keywords" content="agence digitale Dakar, développement web Senegal, apps mobiles Android iOS, marketing digital, SEO, Laravel, Angular, montage vidéo">
+    <meta name="author" content="BIMO-tech">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://bimo-tech.sn/">
 
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bimo-tech.sn/">
+    <meta property="og:title" content="BIMO-tech - Agence Digitale Innovante à Dakar">
+    <meta property="og:description" content="Développement web, apps mobiles, marketing digital. Accompagnez votre transformation digitale avec BIMO-tech.">
+    <meta property="og:image" content="https://bimo-tech.sn/image/home.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://bimo-tech.sn/">
+    <meta property="twitter:title" content="BIMO-tech - Agence Digitale Innovante à Dakar">
+    <meta property="twitter:description" content="Développement web, apps mobiles, marketing digital. Accompagnez votre transformation digitale avec BIMO-tech.">
+    <meta property="twitter:image" content="https://bimo-tech.sn/image/home.jpg">
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "BIMO-tech",
+      "description": "Agence digitale spécialisée dans le développement web, mobile et marketing digital à Dakar",
+      "url": "https://bimo-tech.sn",
+      "telephone": "+221 77 123 45 67",
+      "email": "contact@bimo-tech.sn",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dakar",
+        "addressCountry": "SN"
+      },
+      "sameAs": [
+        "https://www.facebook.com/bimo-tech",
+        "https://www.instagram.com/bimo-tech",
+        "https://www.youtube.com/bimo-tech"
+      ],
+      "serviceType": ["Développement Web", "Apps Mobiles", "Marketing Digital", "Montage Vidéo"],
+      "areaServed": "Senegal"
+    }
+    </script>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>BIMO-tech - Agence Digitale à Dakar</title>
 </head>
 <body>
 
-    <!-- ##################### -->
-    <!--  Navigation  -->
-    <!-- ##################### -->
-    <nav>
-        <a href="#" class="logo"><img src="./image/logo.svg" alt=""></a>
-        <ul class="menu">
-            <li>
-                <a href="#home" class="active">Home</a>
-            </li>
-            <li>
-                <a href="#devises">Devise</a>
-            </li>
-            <li>
-                <a href="#portfolio">Portfolio</a>
-            </li>
-            <li>
-                <a href="#apropos">À propos</a>
-            </li>
-            <li>
-                <a href="#team">Team</a>
-            </li>
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
+
+    <!-- ############### -->
+    <!-- Navigation-->
+    <!-- ############### -->
+
+   <div class="container">
+    <header>
+        <a href="#" class="logo"><i class='bx bx-code-alt'></i>BIMO-<span>tech</span></a>
+        <ul class="navigation">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-        <div id="burger-menu"><ion-icon name="menu-outline"></ion-icon></div>
-    </nav>
-    
+        <div id="burger-menu" class="bx bx-menu"></div>
+    </header>
+   </div>
 
-    <!-- ##################### -->
-    <!--  Home  -->
-    <!-- ##################### -->
+        <!-- ############### -->
+    <!-- Home-->
+    <!-- ############### -->
 
-    <section id="home">
-        <div class="home-video"><video src="./image/p-1.jpg_compressed.jpeg" autoplay muted loop></video></div>
-        <div class="home-filter"></div>
+    <section class="home container" id="home">
         <div class="home-content">
-            <p>Créons un Avenir Guidé par l'IA : Solutions Innovantes pour un Monde Connecté</p>
-            <h1>Intelligence Artificielle Redéfinie</h1>
-            <a href="#devises" class="home-icon"><ion-icon name="chevron-down-outline"></ion-icon></a>
+            <h1>Boostez votre business ! <br> Avec BIMO-tech</h1>
+            <a href="#contact" class="btn">Demander devis gratuit</a>
         </div>
     </section>
 
-    <!-- ##################### -->
-    <!--  Devise  -->
-    <!-- ##################### -->
 
-    <section id="devises">
-        <h2 class="heading">Nos <span>devices</span></h2>
-        <div class="devices-content">
-            <div class="device-box">
-                <ion-icon name="finger-print-outline"></ion-icon>
-                <h3>Solutions IA Avancées</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, ratione sapiente. Similique, placeat! Reprehenderit debitis repellendus, expedita nesciunt veritatis neque.</p>
+        <!-- ############### -->
+    <!-- A propos ->
+    <!-- ############### -->
+
+    <section class="about container" id="about">
+        <div class="about-img">
+            <img src="./image/about.jpg" alt="Équipe de développeurs BIMO-tech travaillant sur des projets digitaux à Dakar" loading="lazy">
+        </div>
+        <div class="about-content">
+            <span>À propos de BIMO-tech</span>
+            <h2>Agence Digitale Innovante à Dakar</h2>
+            <p>BIMO-tech est une agence digitale basée à Dakar, spécialisée dans le développement web et mobile, le marketing digital et le montage vidéo professionnel.</p>
+            <p>Notre équipe de jeunes développeurs ambitieux met l'innovation au service de votre business, en créant des solutions sur mesure avec Laravel, Angular et autres technologies modernes.</p>
+            <p>Nous accompagnons les entreprises sénégalaises dans leur transformation digitale pour booster leur visibilité et leurs ventes en ligne.</p>
+            <a href="#services" class="btn">Nos Services</a>
+        </div>
+    </section>
+
+        <!-- ############### -->
+    <!-- Services -->
+    <!-- ############### -->
+
+    <div class="services container" id="services">
+        <div class="box">
+            <i class='bx bxs-user'></i>
+            <h3>Développement Web</h3>
+            <p>Création de sites vitrines, e-commerce et applications web personnalisées avec Laravel et autres frameworks modernes.</p>
+        </div>
+        <div class="box">
+            <i class='bx bxs-plane-alt' ></i>
+            <h3>Apps Mobiles</h3>
+            <p>Développement d'applications mobiles natives et hybrides pour iOS et Android, adaptées aux besoins des entreprises sénégalaises.</p>
+        </div>
+        <div class="box">
+            <i class='bx bx-world' ></i>
+            <h3>Marketing Digital</h3>
+            <p>Stratégies de réseaux sociaux, SEO, publicité en ligne pour accroître votre présence digitale et attirer plus de clients.</p>
+        </div>
+    </div>
+
+
+        <!-- ############### -->
+    <!-- Locations -->
+    <!-- ############### -->
+
+    <section class="locations container" id="portfolio">
+        <div class="heading">
+            <span>Nos Réalisations</span>
+            <h2>Découvrez nos projets</h2>
+            <p>Explorez nos projets réussis en développement web, apps mobiles et marketing digital. <br> Chaque réalisation est une preuve de notre expertise et de notre engagement.</p>
+        </div>
+
+        <div class="locations-container ">
+
+            <div class="location-box">
+                <img src="https://picsum.photos/300/200?random=4" alt="Site e-commerce développé par BIMO-tech pour boutique de mode africaine à Dakar" loading="lazy">
+                <h5>300€ <span>/ mois</span></h5>
+                <div class="content">
+                    <div class="text">
+                        <h4>Site E-commerce Dakar</h4>
+                        <p>Boutique en ligne pour mode africaine</p>
+                    </div>
+                    <div class="icons">
+                        <i class='bx bx-code' > <span>Laravel</span></i>
+                        <i class='bx bx-mobile' ><span>Responsive</span></i>
+                        <i class='bx bx-trending-up' ><span>SEO</span></i>
+                    </div>
+                </div>
             </div>
-            <div class="device-box">
-                <ion-icon name="layers-outline"></ion-icon>
-                <h3>Exploration des Capacités</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, ratione sapiente. Similique, placeat! Reprehenderit debitis repellendus, expedita nesciunt veritatis neque.</p>
+
+            <div class="location-box">
+                <img src="https://picsum.photos/300/200?random=5" alt="Application mobile de livraison développée par BIMO-tech pour restaurants à Dakar" loading="lazy">
+                <h5>500€ <span>/ mois</span></h5>
+                <div class="content">
+                    <div class="text">
+                        <h4>App de Livraison</h4>
+                        <p>Application mobile pour restaurants Dakar</p>
+                    </div>
+                    <div class="icons">
+                        <i class='bx bx-mobile' > <span>Android/iOS</span></i>
+                        <i class='bx bx-map' ><span>GPS</span></i>
+                        <i class='bx bx-time' ><span>Rapide</span></i>
+                    </div>
+                </div>
             </div>
-            <div class="device-box">
-                <ion-icon name="options-outline"></ion-icon>
-                <h3>Pratiques de l'IA</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur, ratione sapiente. Similique, placeat! Reprehenderit debitis repellendus, expedita nesciunt veritatis neque.</p>
+
+            <div class="location-box">
+                <img src="https://picsum.photos/300/200?random=6" alt="Campagne marketing digital réalisée par BIMO-tech pour entreprise touristique au Sénégal" loading="lazy">
+                <h5>600€ <span>/ mois</span></h5>
+                <div class="content">
+                    <div class="text">
+                        <h4>Campagne Marketing</h4>
+                        <p>Réseaux sociaux pour entreprise touristique</p>
+                    </div>
+                    <div class="icons">
+                        <i class='bx bx-like' > <span>Engagement</span></i>
+                        <i class='bx bx-target' ><span>Ciblage</span></i>
+                        <i class='bx bx-analytics' ><span>Analytics</span></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="location-box">
+                <img src="https://picsum.photos/300/200?random=7" alt="Montage vidéo promotionnel réalisé par BIMO-tech pour startup tech au Sénégal" loading="lazy">
+                <h5>600€ <span>/ mois</span></h5>
+                <div class="content">
+                    <div class="text">
+                        <h4>Montage Vidéo Promo</h4>
+                        <p>Clip publicitaire pour startup tech</p>
+                    </div>
+                    <div class="icons">
+                        <i class='bx bx-video' > <span>4K</span></i>
+                        <i class='bx bx-edit' ><span>Montage</span></i>
+                        <i class='bx bx-music' ><span>Sound</span></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="location-box">
+                <img src="https://picsum.photos/300/200?random=8" alt="Site vitrine développé par BIMO-tech pour artiste à Dakar" loading="lazy">
+                <h5>600€ <span>/ mois</span></h5>
+                <div class="content">
+                    <div class="text">
+                        <h4>Site Vitrine Artisan</h4>
+                        <p>Portfolio en ligne pour artiste Dakar</p>
+                    </div>
+                    <div class="icons">
+                        <i class='bx bx-palette' > <span>Design</span></i>
+                        <i class='bx bx-globe' ><span>Multilingue</span></i>
+                        <i class='bx bx-star' ><span>Premium</span></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="location-box">
+                <img src="https://picsum.photos/300/200?random=9" alt="Application de réservation développée par BIMO-tech pour hôtels et guesthouses au Sénégal" loading="lazy">
+                <h5>400€ <span>/ mois</span></h5>
+                <div class="content">
+                    <div class="text">
+                        <h4>App de Réservation</h4>
+                        <p>Plateforme pour hôtels et guesthouses</p>
+                    </div>
+                    <div class="icons">
+                        <i class='bx bx-calendar' > <span>Résa</span></i>
+                        <i class='bx bx-credit-card' ><span>Paiement</span></i>
+                        <i class='bx bx-bell' ><span>Notif</span></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+            <!-- ############### -->
+    <!-- Témoignages -->
+    <!-- ############### -->
+
+    <section class="testimonials container">
+        <div class="heading">
+            <span>Témoignages</span>
+            <h2>Ce que disent nos clients</h2>
+            <p>Découvrez les retours de nos clients satisfaits qui ont boosté leur business avec nos services.</p>
+        </div>
+        <div class="testimonials-container">
+            <div class="testimonial-box">
+                <i class='bx bxs-quote-alt-left'></i>
+                <p>"BIMO-tech a transformé notre site e-commerce. Ventes en ligne multipliées par 3 !"</p>
+                <div class="testimonial-info">
+                    <img src="https://picsum.photos/50/50?random=10" alt="Client 1">
+                    <div>
+                        <h4>Mamadou Diallo</h4>
+                        <span>Propriétaire, Mode Dakar</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-box">
+                <i class='bx bxs-quote-alt-left'></i>
+                <p>"Application mobile parfaite pour notre livraison. Interface intuitive et rapide."</p>
+                <div class="testimonial-info">
+                    <img src="https://picsum.photos/50/50?random=11" alt="Client 2">
+                    <div>
+                        <h4>Fatou Ndiaye</h4>
+                        <span>CEO, FoodExpress Dakar</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-box">
+                <i class='bx bxs-quote-alt-left'></i>
+                <p>"Campagne marketing digitale exceptionnelle. Plus de visibilité et de clients."</p>
+                <div class="testimonial-info">
+                    <img src="https://picsum.photos/50/50?random=12" alt="Client 3">
+                    <div>
+                        <h4>Abdoulaye Sow</h4>
+                        <span>Directeur, Tourisme Senegal</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-            <!-- ##################### -->
-    <!--  Portfolio -->
-    <!-- ##################### -->
+            <!-- ############### -->
+    <!-- Newsletter-->
+    <!-- ############### -->
 
-    <section id="portfolio">
-        <div class="portfolio-filtre"></div>
-        <h2 class="heading">Nos <span>Projets</span></h2>
-            <div class="portfolio-container">
-            <div class="portfolio-box">
-                    <img src="./image/p-1.jpg_compressed.jpeg" alt="">
-               <div class="portfolio-box-content">
-                <h4>Titre du projet</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ducimus, voluptatibus ipsum quis necessitatibus a eos nesciunt quaerat nostrum praesentium!</p>
-                <a class="btn" href="#"><ion-icon name="arrow-forward-outline"></ion-icon></a>
-               </div>
-            </div>
-            <div class="portfolio-box">
-                    <img src="./image/p-2.jpg_compressed.jpeg" alt="">
-               <div class="portfolio-box-content">
-                <h4>Titre du projet</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ducimus, voluptatibus ipsum quis necessitatibus a eos nesciunt quaerat nostrum praesentium!</p>
-                <a class="btn" href="#"><ion-icon name="arrow-forward-outline"></ion-icon></a>
-               </div>
-            </div>
-            <div class="portfolio-box">
-                    <img src="./image/p-3.jpg_compressed.jpeg" alt="">
-               <div class="portfolio-box-content">
-                <h4>Titre du projet</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ducimus, voluptatibus ipsum quis necessitatibus a eos nesciunt quaerat nostrum praesentium!</p>
-                <a class="btn" href="#"><ion-icon name="arrow-forward-outline"></ion-icon></a>
-               </div>
-            </div>
-            <div class="portfolio-box">
-                    <img src="./image/p-4.jpg_compressed.jpeg" alt="">
-               <div class="portfolio-box-content">
-                <h4>Titre du projet</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ducimus, voluptatibus ipsum quis necessitatibus a eos nesciunt quaerat nostrum praesentium!</p>
-                <a class="btn" href="#"><ion-icon name="arrow-forward-outline"></ion-icon></a>
-               </div>
-            </div>
-            <div class="portfolio-box">
-                    <img src="./image/p-5.jpg_compressed.jpeg" alt="">
-               <div class="portfolio-box-content">
-                <h4>Titre du projet</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ducimus, voluptatibus ipsum quis necessitatibus a eos nesciunt quaerat nostrum praesentium!</p>
-                <a class="btn" href="#"><ion-icon name="arrow-forward-outline"></ion-icon></a>
-               </div>
-            </div>
-            <div class="portfolio-box">
-                    <img src="./image/p-6.jpg_compressed.jpeg" alt="">
-               <div class="portfolio-box-content">
-                <h4>Titre du projet</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ducimus, voluptatibus ipsum quis necessitatibus a eos nesciunt quaerat nostrum praesentium!</p>
-                <a class="btn" href="#"><ion-icon name="arrow-forward-outline"></ion-icon></a>
-               </div>
-            </div>
-            </div>
-        </div>
+    <section class="newsletter container">
+        <h2>Restez informé de nos offres</h2>
+        <form action="#">
+            <input type="email" placeholder="Votre email" required>
+            <button type="submit" class="btn">S'abonner</button>
+        </form>
+       <div class="social">
+                    <a href="#"><i class='bx bxl-facebook' ></i></a>
+                    <a href="#"><i class='bx bxl-twitter' ></i></a>
+                    <a href="#"><i class='bx bxl-instagram' ></i></a>
+                    <a href="#"><i class='bx bxl-youtube' ></i></a>
+                </div>
     </section>
 
-        <!-- ##################### -->
-    <!--  À propos  -->
-    <!-- ##################### -->
-
-    <section id="apropos">
-        <h2 class="heading">Qui nous <span>somme ?</span></h2>
-        <div class="about-container">
-            <div class="about-img">
-              <img src="./image/apropos.svg" alt="">
-            </div>
-            <div class="about-content">
-              <span>À propos de nous</span>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur voluptates veniam eum ea minus corrupti eligendi, velit in. Aspernatur, voluptatem.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, non. Consequatur, fugit quia. Ipsum fuga non illo culpa, mollitia porro harum aspernatur consectetur alias aliquam quos eos doloremque voluptatibus tenetur?</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, non. Consequatur, fugit quia. Ipsum fuga non illo culpa, mollitia porro harum aspernatur consectetur alias aliquam quos eos doloremque voluptatibus tenetur?</p>
-              <a href="#" class="btn">En savoir plus</a>
-            </div>
-    
-          </div>
-    </section>
-
-
-            <!-- ##################### -->
-    <!-- Team -->
-    <!-- ##################### -->
-
-    <section id="team">
-        <h2 class="heading">Notre <span>Équipe</span></h2>
-
-        <div class="team-container">
-
-            <div class="team-box" >
-                    <img src="./image/img-01.jpg_compressed.jpeg" alt="">
-                  <div class="team-box-content">
-                    <h1>Pierre Does</h1>
-                    <ul class="team-box-social">
-                            <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
-                            <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-                            <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
-                            <li><a href="#"><ion-icon name="logo-github"></ion-icon></a></li>
-                    </ul>
-                  </div>
-                </div>
-            <div class="team-box">
-                    <img src="./image/img-02.jpg_compressed.jpeg" alt="">
-                  <div class="team-box-content">
-                    <h1>Damien Joha</h1>
-                    <ul class="team-box-social">
-                        <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
-                        <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-                        <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
-                        <li><a href="#"><ion-icon name="logo-github"></ion-icon></a></li>
-                </ul>
-                  </div>
-                </div>
-            <div class="team-box" >
-                    <img src="./image/img-03.jpg_compressed.jpeg" alt="">
-                  <div class="team-box-content">
-                    <h1>Lucie Sanchez</h1>
-                    <ul class="team-box-social">
-                        <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
-                        <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-                        <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
-                        <li><a href="#"><ion-icon name="logo-github"></ion-icon></a></li>
-                </ul>
-                  </div>
-                </div>
-            <div class="team-box" >
-                    <img src="./image/img-04.jpg_compressed.jpeg" alt="">
-                  <div class="team-box-content">
-                    <h1>Melanie Laritson</h1>
-                    <ul class="team-box-social">
-                        <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
-                        <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-                        <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
-                        <li><a href="#"><ion-icon name="logo-github"></ion-icon></a></li>
-                </ul>
-                  </div>
-                </div>
-              </div>
-          </div>
-    </section>
-
-                <!-- ##################### -->
+        <!-- ############### -->
     <!-- Contact -->
-    <!-- ##################### -->
+    <!-- ############### -->
 
-    <section class="contact" id="contact">
+    <section class="contact container" id="contact">
+        <div class="contact-form">
+            <h2>Contactez-nous</h2>
+            <p>Prêt à booster votre business ? Contactez BIMO-tech pour un devis gratuit.</p>
+            <form action="#">
+                <input type="text" placeholder="Votre nom" required>
+                <input type="email" placeholder="Votre email" required>
+                <input type="tel" placeholder="Votre téléphone" required>
+                <textarea placeholder="Votre message" required></textarea>
+                <button type="submit" class="btn">Envoyer</button>
+            </form>
+        </div>
+        <div class="contact-info">
+            <h2>Informations</h2>
+            <div>
+                <i class='bx bx-map'></i>
+                <p>Dakar, Sénégal</p>
+            </div>
+            <div>
+                <i class='bx bx-phone'></i>
+                <p>+221 77 123 45 67</p>
+            </div>
+            <div>
+                <i class='bx bx-envelope'></i>
+                <p>contact@bimo-tech.sn</p>
+            </div>
+        </div>
+    </section>
 
-        <h2 class="heading">Nous <span>Contactez</span></h2>
-          <div class="contact-container">
-  
-            <div class="contact-infos">
-              <h3>Prennez commande</h3>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed eaque praesentium eligendi officia amet illum deserunt, voluptas, esse officiis fuga labore? Officiis, error iste! Tempore tempora dolorem quibusdam aliquam atque.</p>
-              <div class="adress">
-               <div>
-                <ion-icon name="home-outline"></ion-icon><span>22 rue de la paix, Paris (France)</span></i>
-               </div>
-              <div>
-                <ion-icon name="call-outline"></ion-icon><span>+0 00 00 00 00</span></i>
-              </div>
-                <div>
-                    <ion-icon name="mail-outline"></ion-icon><span>cakyshop@gmail.com</span></i>
+        <!-- ############### -->
+    <!-- Footer -->
+    <!-- ############### -->
+
+    <footer>
+        <div class="footer-container container">
+            <h2>BIMO-<span>TECH</span></h2>
+            <div class="footer-box">
+                <h3>Liens Utiles</h3>
+                <a href="#about">À propos</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-box">
+                <h3>Services</h3>
+                <a href="#services">Développement Web</a>
+                <a href="#services">Apps Mobiles</a>
+                <a href="#services">Marketing Digital</a>
+            </div>
+            <div class="footer-box">
+                <h3>Contact</h3>
+                <a href="#"> +221 77 123 45 67</a>
+                <a href="#">contact@bimo-tech.sn</a>
+                <div class="social">
+                    <a href="#"><i class='bx bxl-facebook' ></i></a>
+                    <a href="#"><i class='bx bxl-twitter' ></i></a>
+                    <a href="#"><i class='bx bxl-instagram' ></i></a>
+                    <a href="#"><i class='bx bxl-youtube' ></i></a>
                 </div>
-              </div>
-              <div class="social">
-               <a href="#"> <ion-icon name="logo-facebook"></ion-icon></a>
-                <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
-                <a href="#"><ion-icon name="logo-instagram"></ion-icon></i></a>
-                <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
-              </div>
-  
             </div>
-  
-            <div class="contact-form">
-              <form action="#">
-                <input type="text" placeholder="Indiquez votre nom">
-                <input type="text" placeholder="Indiquez votre prenom">
-                <input type="email" placeholder="Indiquez votre e-mail">
-                <textarea placeholder="Votre message" cols="30" rows="10"></textarea>
-                <input type="submit" value="Envoyer" class="btn">
-              </form>
-            </div>
-  
-  
-          </div>
-  
-      </section>
-                <!-- ##################### -->
-    <!-- Footer-->
-    <!-- ##################### -->
+        </div>
+    </footer>
 
-<footer>
-    <p>&copy; BIMO-tech - Tous droits réservés  - 2023</p>
-</footer>
+    <div class="copy">
+        <p>&copy; Tous droits réservés - BIMO-tech - 2024</p>
+    </div>
 
+    
 
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="app.js"></script>
 </body>
 </html>

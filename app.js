@@ -1,104 +1,78 @@
-const btnBurger = document.querySelector('#burger-menu');
-const menu = document.querySelector('.menu');
-const nav = document.querySelector('nav');
-const iconBurger = document.querySelector('#burger-menu ion-icon');
 const sections = document.querySelectorAll('section');
-const links = document.querySelectorAll('.menu li a');
+const header = document.querySelector('header');
+const btnBurger = document.querySelector('#burger-menu');
+const nav = document.querySelector('.navigation');
+const linkNav = document.querySelectorAll('.navigation a');
 
+// Initialize ScrollReveal
+const sr = ScrollReveal({
+    origin: 'bottom',
+    distance: '60px',
+    duration: 1000,
+    delay: 200,
+    reset: true
+});
 
-// ##########################
-// Navigation
-// ##########################
+// Apply ScrollReveal to sections
+sr.reveal('.home-content', { origin: 'top' });
+sr.reveal('.about-img', { origin: 'left' });
+sr.reveal('.about-content', { origin: 'right' });
+sr.reveal('.services .box', { interval: 200 });
+sr.reveal('.locations .heading', { origin: 'top' });
+sr.reveal('.location-box', { interval: 200 });
+sr.reveal('.newsletter', { origin: 'bottom' });
+sr.reveal('footer', { origin: 'bottom' });
 
 btnBurger.addEventListener('click', ()=> {
-  menu.classList.toggle('active');
-  nav.classList.add('active');
-  if(menu.classList.contains('active')){
-    iconBurger.setAttribute('name', 'close-outline')
-  }else {
-    iconBurger.setAttribute('name', 'menu-outline')
-  }
+  nav.classList.toggle('active')
+  btnBurger.classList.toggle('bx-x')
+  if(window.scrollY == 0){
+    header.classList.toggle('active')
+ }
 });
 
-window.addEventListener('scroll', ()=> {
-  nav.classList.toggle('active', window.scrollY > 0);
-});
-
-links.forEach(link => {
-  link.addEventListener('click', ()=> {
-    menu.classList.remove('active');
-  if(menu.classList.contains('active')){
-    iconBurger.setAttribute('name', 'close-outline')
-  }else {
-    iconBurger.setAttribute('name', 'menu-outline')
-  }
-  });
+linkNav.forEach(link => {
+    link.addEventListener('click', ()=> {
+        nav.classList.remove('active')
+       btnBurger.classList.remove('bx-x')
+    });
 })
 
-window.addEventListener('scroll', ()=> {
-  menu.classList.remove('active')
-  if(menu.classList.contains('active')){
-    iconBurger.setAttribute('name', 'close-outline')
-  }else {
-    iconBurger.setAttribute('name', 'menu-outline')
-  }
-});
+// Optimization: Use requestAnimationFrame for scroll events to improve fluidity
+let isScrolling = false;
 
+window.addEventListener('scroll', () => {
+    if (!isScrolling) {
+        window.requestAnimationFrame(() => {
+            // Toggle header active state
+            header.classList.toggle('active', window.scrollY > 0);
+            
+            // Close mobile menu on scroll
+            nav.classList.remove('active');
+            btnBurger.classList.remove('bx-x');
 
-
-
-function setActiveLink() {
-  let currentScroll = window.scrollY;
-
-  sections.forEach((section) => {
-    if (section.offsetTop <= currentScroll && section.offsetTop + section.offsetHeight > currentScroll) {
-      links.forEach((link) => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').substring(1) === section.id) {
-          link.classList.add('active');
-        }
-      });
+            isScrolling = false;
+        });
+        isScrolling = true;
     }
-  });
-}
+}, { passive: true }); // Passive listener improves scroll performance
 
-document.addEventListener('scroll', setActiveLink);
+// Optimization: Use IntersectionObserver instead of scroll event for Active Link Highlighting
+const observerOptions = {
+    threshold: 0.5, // Trigger when 50% of the section is visible
+    rootMargin: "-50px 0px -50px 0px"
+};
 
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            linkNav.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(id)) link.classList.add('active');
+            });
+        }
+    });
+}, observerOptions);
 
-// ##########################
-// Effet tilts
-// ##########################
-
-
-// Définition de la fonction qui ajoute l'effet de basculement (tilt)
-function addTiltEffect(element) {
-  // Ajoute un écouteur d'événement pour le mouvement de la souris
-  element.addEventListener('mousemove', function(e) {
-      // Obtient les dimensions et la position de l'élément
-      const bounding = element.getBoundingClientRect();
-      // Calcule les coordonnées du centre de l'élément
-      const centerX = bounding.left + bounding.width / 2;
-      const centerY = bounding.top + bounding.height / 2;
-      // Calcule la distance entre le curseur de la souris et le centre de l'élément
-      const offsetX = e.clientX - centerX;
-      const offsetY = e.clientY - centerY;
-      // Calcule l'angle de basculement sur l'axe X et Y
-      const tiltX = (offsetY / centerY) * 50;
-      const tiltY = -(offsetX / centerX) * 50;
-
-      // Applique la transformation CSS pour créer l'effet de basculement
-      element.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
-  });
-
-  // Ajoute un écouteur d'événement pour quand la souris sort de l'élément
-  element.addEventListener('mouseout', function() {
-      // Réinitialise la transformation pour revenir à la position initiale
-      element.style.transform = 'rotateX(0deg) rotateY(0deg)';
-  });
-}
-
-// Sélectionne tous les éléments avec la classe "team-box"
-const teamBoxes = document.querySelectorAll('.team-box');
-
-// Applique l'effet de basculement à chaque élément
-teamBoxes.forEach(addTiltEffect);
+sections.forEach(section => observer.observe(section));
