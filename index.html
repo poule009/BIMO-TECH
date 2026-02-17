@@ -12,10 +12,13 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
     <meta property="og:url" content="https://bimo-tech.sn/">
     <meta property="og:title" content="BIMO-tech - Agence Digitale Innovante à Dakar">
     <meta property="og:description" content="Développement web, apps mobiles, marketing digital. Accompagnez votre transformation digitale avec BIMO-tech.">
     <meta property="og:image" content="https://bimo-tech.sn/image/home.jpg">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="alternate" hreflang="fr" href="https://bimo-tech.sn/">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
@@ -32,8 +35,8 @@
       "name": "BIMO-tech",
       "description": "Agence digitale spécialisée dans le développement web, mobile et marketing digital à Dakar",
       "url": "https://bimo-tech.sn",
-      "telephone": "+221 77 123 45 67",
-      "email": "contact@bimo-tech.sn",
+      "telephone": "+221 78 131 81 76",
+      "email": "BIMO-tech@gmail.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Dakar",
@@ -49,8 +52,14 @@
     }
     </script>
 
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
+    <!-- preconnect to font provider to speed up text rendering -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <!-- load the minified stylesheet; fall back to original if there is a problem -->
+    <link rel="stylesheet" href="style.min.css" media="screen"
+          onerror="this.onerror=null;this.href='style.css'">
+
     <title>BIMO-tech - Agence Digitale à Dakar</title>
 </head>
 <body>
@@ -62,15 +71,17 @@
 
    <div class="container">
     <header>
-        <a href="#" class="logo"><i class='bx bx-code-alt'></i>BIMO-<span>tech</span></a>
+        <a href="#" class="logo"><img src="image/Design sans titre.png" alt="Logo BIMO-tech" class="logo-img">BIMO-<span>tech</span></a>
         <ul class="navigation">
-            <li><a href="#home" class="active">Home</a></li>
-            <li><a href="#about">À propos</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home" class="active"><i class='bx bx-home'></i> Home</a></li>
+            <li><a href="#about"><i class='bx bx-user'></i> À propos</a></li>
+            <li><a href="#services"><i class='bx bx-briefcase'></i> Services</a></li>
+            <li><a href="#case-studies" aria-label="Cas d'études"><i class='bx bx-file'></i> Cas d'études</a></li>
+            <li><a href="#realisations"><i class='bx bx-image'></i> Réalisations</a></li>
+            <!-- call-to-action styled link for conversions -->
+            <li><a href="#contact" class="btn nav-cta"><i class='bx bx-envelope'></i> Demander un devis</a></li>
         </ul>
-        <div id="burger-menu" class="bx bx-menu"></div>
+        <div id="burger-menu" class="bx bx-menu" aria-label="menu"></div>
     </header>
    </div>
 
@@ -80,26 +91,36 @@
 
     <section class="home container" id="home">
         <div class="home-content">
-            <h1>Boostez votre business ! <br> Avec BIMO-tech</h1>
-            <a href="#contact" class="btn">Demander devis gratuit</a>
+            <div class="hero-text">
+                <div class="badge">Offre spéciale</div>
+                <h1>Boostez votre business ! <br> Avec BIMO-tech</h1>
+                <div class="hero-buttons">
+                    <a href="mailto:elhadjimalickaidara69@gmail.com?subject=Demande%20de%20devis" class="btn primary">Demander devis gratuit</a>
+                    <a href="mailto:elhadjimalickaidara69@gmail.com?subject=Demande%20d'audit" class="btn secondary">Demander audit gratuit</a>
+                </div>
+            </div>
+            <div class="hero-illustration">
+                <img src="https://via.placeholder.com/300x200?text=Tech+Illustration" alt="Illustration technologique – Agence digitale BIMO-tech Dakar" loading="lazy">
+            </div>
         </div>
     </section>
 
 
         <!-- ############### -->
-    <!-- A propos ->
+    <!-- À propos -->
     <!-- ############### -->
 
     <section class="about container" id="about">
         <div class="about-img">
-            <img src="./image/about.jpg" alt="Équipe de développeurs BIMO-tech travaillant sur des projets digitaux à Dakar" loading="lazy">
+            <img src="image/Design sans titre.png" alt="Équipe de développeurs BIMO-tech travaillant sur des projets digitaux à Dakar" loading="lazy">
         </div>
         <div class="about-content">
             <span>À propos de BIMO-tech</span>
             <h2>Agence Digitale Innovante à Dakar</h2>
-            <p>BIMO-tech est une agence digitale basée à Dakar, spécialisée dans le développement web et mobile, le marketing digital et le montage vidéo professionnel.</p>
-            <p>Notre équipe de jeunes développeurs ambitieux met l'innovation au service de votre business, en créant des solutions sur mesure avec Laravel, Angular et autres technologies modernes.</p>
+            <p>BIMO-tech est une agence digitale basée à Dakar, spécialisée dans le développement web et mobile, la maintenance de sites/applications, le marketing digital et le montage vidéo professionnel.</p>
+            <p>Notre équipe de jeunes développeurs ambitieux met l'innovation au service de votre business, en créant des solutions sur mesure avec les technologies les plus adaptées.</p>
             <p>Nous accompagnons les entreprises sénégalaises dans leur transformation digitale pour booster leur visibilité et leurs ventes en ligne.</p>
+            <p>Consultez également nos études de cas pour découvrir en détail nos méthodes et les résultats obtenus.</p>
             <a href="#services" class="btn">Nos Services</a>
         </div>
     </section>
@@ -113,40 +134,61 @@
             <i class='bx bxs-user'></i>
             <h3>Développement Web</h3>
             <p>Création de sites vitrines, e-commerce et applications web personnalisées avec Laravel et autres frameworks modernes.</p>
+            <ul class="service-list">
+                <li>Sites adaptatifs (responsive)</li>
+                <li>Optimisation SEO & performances</li>
+                <li>Maintenance continue et support 1 an</li>
+            </ul>
+            <a href="mailto:elhadjimalickaidara69@gmail.com?subject=Demande%20de%20service%20-%20Web" class="btn secondary small">Contactez-nous</a>
         </div>
         <div class="box">
             <i class='bx bxs-plane-alt' ></i>
             <h3>Apps Mobiles</h3>
             <p>Développement d'applications mobiles natives et hybrides pour iOS et Android, adaptées aux besoins des entreprises sénégalaises.</p>
+            <ul class="service-list">
+                <li>Android & iOS</li>
+                <li>Notifications push et géolocalisation</li>
+                <li>Intégration d'API et paiement</li>
+            </ul>
+            <a href="mailto:elhadjimalickaidara69@gmail.com?subject=Demande%20de%20service%20-%20Mobile" class="btn secondary small">Contactez-nous</a>
         </div>
         <div class="box">
             <i class='bx bx-world' ></i>
             <h3>Marketing Digital</h3>
             <p>Stratégies de réseaux sociaux, SEO, publicité en ligne pour accroître votre présence digitale et attirer plus de clients.</p>
+            <ul class="service-list">
+                <li>Community management</li>
+                <li>Référencement naturel & payant</li>
+                <li>Suivi et reporting analytics</li>
+            </ul>
+            <a href="mailto:elhadjimalickaidara69@gmail.com?subject=Demande%20de%20service%20-%20Marketing" class="btn secondary small">Contactez-nous</a>
         </div>
     </div>
 
 
         <!-- ############### -->
-    <!-- Locations -->
+    <!-- Locations / Réalisations -->
     <!-- ############### -->
 
-    <section class="locations container" id="portfolio">
+    <section class="locations container" id="realisations">
         <div class="heading">
             <span>Nos Réalisations</span>
-            <h2>Découvrez nos projets</h2>
-            <p>Explorez nos projets réussis en développement web, apps mobiles et marketing digital. <br> Chaque réalisation est une preuve de notre expertise et de notre engagement.</p>
+            <h2>Quelques projets marquants</h2>
+            <p>Explorez nos projets réussis en développement web, apps mobiles et marketing digital. <br> Chaque réalisation illustre notre expertise et notre professionnalisme.</p>
         </div>
 
         <div class="locations-container ">
 
             <div class="location-box">
                 <img src="https://picsum.photos/300/200?random=4" alt="Site e-commerce développé par BIMO-tech pour boutique de mode africaine à Dakar" loading="lazy">
+                <div class="overlay">
+                    <p>Refonte d'un site e-commerce <br>Augmentation des ventes de 300 %.</p>
+                </div>
                 <h5>300€ <span>/ mois</span></h5>
                 <div class="content">
                     <div class="text">
-                        <h4>Site E-commerce Dakar</h4>
-                        <p>Boutique en ligne pour mode africaine</p>
+                        <h4>Site vitrine </h4>
+                        <p>Restaurant congolais</p>
                     </div>
                     <div class="icons">
                         <i class='bx bx-code' > <span>Laravel</span></i>
@@ -154,11 +196,11 @@
                         <i class='bx bx-trending-up' ><span>SEO</span></i>
                     </div>
                 </div>
+                <a href="https://site-restant-deesee-v2.vercel.app/" class="btn">Visiter</a>
             </div>
 
             <div class="location-box">
                 <img src="https://picsum.photos/300/200?random=5" alt="Application mobile de livraison développée par BIMO-tech pour restaurants à Dakar" loading="lazy">
-                <h5>500€ <span>/ mois</span></h5>
                 <div class="content">
                     <div class="text">
                         <h4>App de Livraison</h4>
@@ -170,11 +212,11 @@
                         <i class='bx bx-time' ><span>Rapide</span></i>
                     </div>
                 </div>
+                <a href="#" class="btn">Visiter</a>
             </div>
 
             <div class="location-box">
                 <img src="https://picsum.photos/300/200?random=6" alt="Campagne marketing digital réalisée par BIMO-tech pour entreprise touristique au Sénégal" loading="lazy">
-                <h5>600€ <span>/ mois</span></h5>
                 <div class="content">
                     <div class="text">
                         <h4>Campagne Marketing</h4>
@@ -186,6 +228,7 @@
                         <i class='bx bx-analytics' ><span>Analytics</span></i>
                     </div>
                 </div>
+                <a href="#" class="btn">Visiter</a>
             </div>
 
             <div class="location-box">
@@ -202,6 +245,7 @@
                         <i class='bx bx-music' ><span>Sound</span></i>
                     </div>
                 </div>
+                <a href="#" class="btn">Visiter</a>
             </div>
 
             <div class="location-box">
@@ -218,6 +262,7 @@
                         <i class='bx bx-star' ><span>Premium</span></i>
                     </div>
                 </div>
+                <a href="#" class="btn">Visiter</a>
             </div>
 
             <div class="location-box">
@@ -234,6 +279,7 @@
                         <i class='bx bx-bell' ><span>Notif</span></i>
                     </div>
                 </div>
+                <a href="#" class="btn">Visiter</a>
             </div>
 
         </div>
@@ -243,6 +289,45 @@
     <!-- Témoignages -->
     <!-- ############### -->
 
+    <!-- ############### -->
+    <!-- Cas d'études -->
+    <!-- ############### -->
+    <section class="case-study container" id="case-studies">
+        <div class="heading">
+            <span>Cas d'étude</span>
+            <h2>Projets en détail</h2>
+            <p>Découvrez comment nous résolvons des défis réels grâce à nos solutions innovantes.</p>
+        </div>
+        <div class="case-cards">
+            <div class="case-card">
+                <img src="https://picsum.photos/400/250?random=10" alt="Étude de cas site e-commerce">
+                <div class="case-info">
+                    <h4>Plateforme e-commerce performante</h4>
+                    <p>Augmentation de 300 % des ventes d'un client mode.</p>
+                    <ul class="case-details">
+                        <li>Défi : site obsolète et lent</li>
+                        <li>Solution : refonte Laravel + optimisation mobile</li>
+                        <li>Résultats : +300 % CA en 6 mois</li>
+                    </ul>
+                </div>
+                <a href="#" class="btn">Voir le cas</a>
+            </div>
+            <div class="case-card">
+                <img src="https://picsum.photos/400/250?random=11" alt="Étude de cas application mobile">
+                <div class="case-info">
+                    <h4>Application de livraison rapide</h4>
+                    <p>Interface intuitive utilisée par plus de 5 000 utilisateurs.</p>
+                    <ul class="case-details">
+                        <li>Défi : mauvaise expérience client</li>
+                        <li>Solution : UI/UX retravaillée + géolocalisation</li>
+                        <li>Résultats : 5 000+ installs et 4.8★</li>
+                    </ul>
+                </div>
+                <a href="#" class="btn">Voir le cas</a>
+            </div>
+        </div>
+    </section>
+    
     <section class="testimonials container">
         <div class="heading">
             <span>Témoignages</span>
@@ -304,38 +389,9 @@
                 </div>
     </section>
 
-        <!-- ############### -->
-    <!-- Contact -->
-    <!-- ############### -->
+     
 
-    <section class="contact container" id="contact">
-        <div class="contact-form">
-            <h2>Contactez-nous</h2>
-            <p>Prêt à booster votre business ? Contactez BIMO-tech pour un devis gratuit.</p>
-            <form action="#">
-                <input type="text" placeholder="Votre nom" required>
-                <input type="email" placeholder="Votre email" required>
-                <input type="tel" placeholder="Votre téléphone" required>
-                <textarea placeholder="Votre message" required></textarea>
-                <button type="submit" class="btn">Envoyer</button>
-            </form>
-        </div>
-        <div class="contact-info">
-            <h2>Informations</h2>
-            <div>
-                <i class='bx bx-map'></i>
-                <p>Dakar, Sénégal</p>
-            </div>
-            <div>
-                <i class='bx bx-phone'></i>
-                <p>+221 77 123 45 67</p>
-            </div>
-            <div>
-                <i class='bx bx-envelope'></i>
-                <p>contact@bimo-tech.sn</p>
-            </div>
-        </div>
-    </section>
+   
 
         <!-- ############### -->
     <!-- Footer -->
@@ -347,7 +403,7 @@
             <div class="footer-box">
                 <h3>Liens Utiles</h3>
                 <a href="#about">À propos</a>
-                <a href="#portfolio">Portfolio</a>
+                <a href="#realisations">Réalisations</a>
                 <a href="#contact">Contact</a>
             </div>
             <div class="footer-box">
@@ -371,12 +427,13 @@
     </footer>
 
     <div class="copy">
-        <p>&copy; Tous droits réservés - BIMO-tech - 2024</p>
+        <p>&copy; Tous droits réservés - BIMO-tech - 2026</p>
     </div>
 
     
 
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="app.js"></script>
+    <!-- load main JavaScript deferred to avoid render-blocking -->
+    <script src="app.min.js" defer></script>
 </body>
 </html>
